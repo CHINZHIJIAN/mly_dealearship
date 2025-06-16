@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malaysia Dealership - Price</title>
+  <meta name="keywords" content="car pricing, vehicle cost, Malaysia dealership" />
+  <meta name="description" content="Check out our car prices and financing options" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    .modal-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7); display: none; justify-content: center; align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white; padding: 30px; border-radius: 8px; max-width: 400px; width: 100%;
+    }
+    .modal-content h3 {
+      margin-bottom: 20px;
+    }
+    .modal-content input {
+      width: 100%; padding: 10px; margin: 10px 0;
+    }
+    .modal-content button {
+      padding: 10px 20px;
+    }
+    .confirmation-message {
+      text-align: center;
+      color: green;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header section start -->
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class=""></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="model.html">Models</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link navbar-brand" href="index.html"><span><span>Malaysia</span>Dealership</span></a></li>
+            <li class="nav-item active"><a class="nav-link" href="price.html">Price <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <div class="models_banner_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="models_banner_taital">Car Pricing</h1>
+          <p class="models_banner_text">Choose your model, color, and proceed with purchase</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="models_grid_section layout_padding">
+    <div class="container">
+      <div class="row">
+
+        <!-- Car Card Template -->
+        <div class="col-md-4">
+          <div class="model_card">
+            <div class="model_img_box">
+              <img src="images/koenisegg 1.jpg" alt="Koenigsegg Jesko" class="model_img" />
+            </div>
+            <div class="model_detail_box">
+              <h3 class="model_name">Koenigsegg Jesko</h3>
+              <p class="model_description">Luxury hypercar with extreme performance.</p>
+              <div class="model_price_box">
+                <span class="model_price">€4,248,300.00</span>
+              </div>
+              <select class="form-control mb-2">
+                <option>Select Color</option>
+                <option>Black</option>
+                <option>White</option>
+                <option>Silver</option>
+              </select>
+              <button class="btn btn-primary buy-btn" data-car="Koenigsegg Jesko">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="model_card">
+            <div class="model_img_box">
+              <img src="images/bugatti bolide.jpg" alt="Bugatti Bolide" class="model_img" />
+            </div>
+            <div class="model_detail_box">
+              <h3 class="model_name">Bugatti Bolide</h3>
+              <p class="model_description">Track-ready performance machine with aerodynamics.</p>
+              <div class="model_price_box">
+                <span class="model_price">€4,000,000.00</span>
+              </div>
+              <select class="form-control mb-2">
+                <option>Select Color</option>
+                <option>Red</option>
+                <option>Blue</option>
+                <option>Grey</option>
+              </select>
+              <button class="btn btn-primary buy-btn" data-car="Bugatti Bolide">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="model_card">
+            <div class="model_img_box">
+              <img src="images/pagani.jpg" alt="Pagani Huayra" class="model_img" />
+            </div>
+            <div class="model_detail_box">
+              <h3 class="model_name">Pagani Huayra</h3>
+              <p class="model_description">Handcrafted Italian excellence with elegance.</p>
+              <div class="model_price_box">
+                <span class="model_price">€5,033,613.00</span>
+              </div>
+              <select class="form-control mb-2">
+                <option>Select Color</option>
+                <option>Gold</option>
+                <option>Carbon Black</option>
+                <option>Sky Blue</option>
+              </select>
+              <button class="btn btn-primary buy-btn" data-car="Pagani Huayra">Buy</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal-content">
+      <h3>Complete Purchase</h3>
+      <input type="text" id="creditCardNumber" placeholder="Credit Card Number" required />
+      <input type="text" id="creditCardName" placeholder="Name on Card" required />
+      <input type="password" id="creditCardPassword" placeholder="Card Password" required />
+      <button onclick="submitPayment()">Purchase</button>
+    </div>
+  </div>
+
+  <!-- Confirmation -->
+  <div class="modal-overlay" id="confirmationModal">
+    <div class="modal-content confirmation-message">
+      ✔ Your purchase has been made. Thank you!
+    </div>
+  </div>
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>About Malaysia Dealership</h3>
+          <p>Your trusted source for premium and exotic vehicles in Malaysia.</p>
+          <div class="social_icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="model.html">Models</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="price.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>Contact Us</h3>
+          <p><i class="fa fa-map-marker"></i> 123 Auto Street, Motor City</p>
+          <p><i class="fa fa-phone"></i> +1 234 567 8900</p>
+          <p><i class="fa fa-envelope"></i> info@malaysiadealership.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const buyButtons = document.querySelectorAll('.buy-btn');
+    const paymentModal = document.getElementById('paymentModal');
+    const confirmationModal = document.getElementById('confirmationModal');
+
+    buyButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        paymentModal.style.display = 'flex';
+      });
+    });
+
+    function submitPayment() {
+      paymentModal.style.display = 'none';
+      confirmationModal.style.display = 'flex';
+      setTimeout(() => {
+        confirmationModal.style.display = 'none';
+      }, 3000);
+    }
+  </script>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>

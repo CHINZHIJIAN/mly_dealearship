@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Checkout - Malaysia Dealership</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="model.html">Models</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link navbar-brand" href="index.html">
+              <span><span>Malaysia</span>Dealership</span>
+            </a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="price.html">Price</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="checkout_section layout_padding">
+    <div class="container">
+      <h2 class="checkout_title">Checkout</h2>
+      <p class="checkout_text">Please enter your payment details to complete your purchase.</p>
+      
+      <form id="paymentForm" class="checkout_form">
+        <input type="text" placeholder="Cardholder Name" required />
+        <input type="text" placeholder="Credit Card Number" required />
+        <input type="text" placeholder="Expiry Date (MM/YY)" required />
+        <input type="text" placeholder="CVV" required />
+        <input type="password" placeholder="Card Password" required />
+        <button type="submit" class="buy_btn">Confirm Purchase</button>
+      </form>
+
+      <div id="successMessage" class="success_message" style="display:none;">
+        <h3>✔ Your purchase has been made.</h3>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("paymentForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      form.style.display = "none";
+      successMessage.style.display = "block";
+    });
+  </script>
+</body>
+</html>
